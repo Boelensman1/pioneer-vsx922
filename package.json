@@ -1,0 +1,18 @@
+{
+  "name": "pioneer",
+  "version": "0.0.1",
+  "description": "Wrapper for pioneer telnet api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pioneer"
+  ],
+  "author": "Wigger Boelens",
+  "license": "MIT",
+  "dependencies": {
+    "teletype": "^0.2.0",
+    "telnet-client": "^0.15.5"
+  }
+}

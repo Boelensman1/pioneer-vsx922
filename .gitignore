@@ -1,0 +1,12 @@
+# Dependency directory
+node_modules
+
+# Users Environment Variables
+.lock-wscript
+
+# logs
+*.log
+
+# coverage
+coverage
+.nyc_output
