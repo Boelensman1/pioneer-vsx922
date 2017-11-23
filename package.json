@@ -2,17 +2,47 @@
   "name": "pioneer",
   "version": "0.0.1",
   "description": "Wrapper for pioneer telnet api",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "tslint './src/**/*.ts' --project tsconfig.json --type-check",
+    "clean": "rimraf lib",
+    "prepare": "npm run lint && npm run test && npm run clean && npm run compile"
   },
   "keywords": [
     "pioneer"
   ],
-  "author": "Wigger Boelens",
+  "author": "Wigger Boelens <me@wiggerboelens.com> (http://wiggerboelens.com/)",
   "license": "MIT",
   "dependencies": {
     "teletype": "^0.2.0",
-    "telnet-client": "^0.15.5"
+    "typescript": "2.4.1"
+  },
+  "peerDependencies": {
+    "typescript": ">=2.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "latest",
+    "@types/node": "8.0.14",
+    "jest": "20.0.4",
+    "nock": "9.0.14",
+    "rimraf": "^2.6.1",
+    "ts-jest": "^20.0.6",
+    "tslint": "5.5.0",
+    "tslint-config-airbnb": "5.2.1"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "src/__tests__/.*\\.(test)\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
   }
 }

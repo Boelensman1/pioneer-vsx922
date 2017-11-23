@@ -1,0 +1,9 @@
+{
+  "extends": [
+  "tslint-config-airbnb"
+  ],
+  "rules": {
+    "completed-docs": true,
+    "jsdoc-format": true
+  }
+}

@@ -10,3 +10,6 @@ node_modules
 # coverage
 coverage
 .nyc_output
+
+# typescript output
+/lib
