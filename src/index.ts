@@ -34,8 +34,12 @@ export default class Pioneer {
    * Run a command on the device
    * @returns {string} The response of the device
    */
-  private runCommand(command: string): Promise<string> {
-    return executeCommand(this.client, commands[command]);
+  private runCommand(command: string|Command): Promise<string> {
+    if (typeof(command) === 'string') {
+      return executeCommand(this.client, commands[command]);
+    }
+    // otherwise it's a custom command
+    return executeCommand(this.client, command);
   }
 
 

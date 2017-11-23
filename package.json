@@ -24,7 +24,8 @@
   "license": "MIT",
   "dependencies": {
     "teletype": "^0.2.0",
-    "typescript": "2.4.1"
+    "typescript": "2.4.1",
+    "zpad": "^0.5.0"
   },
   "peerDependencies": {
     "typescript": ">=2.1.0"

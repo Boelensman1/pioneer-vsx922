@@ -1,7 +1,7 @@
 import { Command } from './interfaces';
 
 // http://raymondjulin.com/2012/07/15/remote-control-your-pioneer-vsx-receiver-over-telnet/
-const volumeMatch = /VOL\d\d\d/;
+export const volumeMatch = /VOL\d\d\d/;
 
 export type Commands = {
   [key: string]: Command,

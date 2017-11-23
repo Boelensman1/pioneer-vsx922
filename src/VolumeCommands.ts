@@ -1,3 +1,8 @@
+import * as zpad from 'zpad';
+
+import { Command } from './interfaces';
+import { volumeMatch } from './commands';
+
 /**
  * The class containing all the volume related functions
  */
@@ -18,21 +23,16 @@ export default class VolumeCommands {
    * @param desiredVolume What the volume should become
    */
   public set(desiredVolume: number): Promise<number> {
-    return this.get().then((curVolume) => {
-      // see if we need to go up or down
-      const difference = desiredVolume - curVolume;
-      // there does not seem to be any way to just set the volume
-      // so we have to repeatedly increase/decrease
-      // or at least I couldn't figure out the command to directly set
-      if (difference > 0) {
-        return this.increase(difference);
-      }
-      if (difference < 0) {
-        return this.decrease(-difference);
-      }
-      // otherwise we just return
-      return curVolume;
-    });
+    // gonna need a custom command for this one
+    const volumeCommand: Command = {
+      // if needed add a 0 to the volume
+      command: `${zpad(desiredVolume, 3)}VL`,
+      match: volumeMatch,
+    };
+
+    return this.runCommand(volumeCommand).then((vol) => (
+      Number(/VOL(\d{3})/.exec(vol)![1])
+    ));
   }
 
   /**
