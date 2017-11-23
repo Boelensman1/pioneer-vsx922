@@ -5,7 +5,7 @@ export default class PowerCommands {
   constructor(private runCommand: Function) {}
 
   /**
-   * Close the connection to the device
+   * Get whether or not the device is turned on
    */
   public get(): Promise<boolean> {
     return this.runCommand('powerQuery').then((pwr) => (
