@@ -10,7 +10,7 @@
     "test:watch": "jest --watch",
     "lint": "tslint './src/**/*.ts' --project tsconfig.json --type-check",
     "clean": "rimraf lib",
-    "prepare": "npm run lint && npm run test && npm run clean && npm run compile"
+    "prepare": "npm run lint && npm run clean && npm run compile"
   },
   "keywords": [
     "pioneer"
