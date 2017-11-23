@@ -1,6 +1,6 @@
 {
   "name": "pioneer-vsx922",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Wrapper for pioneer telnet api, tested on the vsx922 but probably works for most models",
   "bugs": "https://github.com/Boelensman1/pioneer-vsx922/issues",
   "repository": {
