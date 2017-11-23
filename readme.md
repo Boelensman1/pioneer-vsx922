@@ -57,5 +57,6 @@ Everything related to volume
 
 #### Power
 - **Get** `pioneer.power.get()` Returns whether or not the device is powered on
+- **Set** `pioneer.power.set(true|false)` Sets whether or not the device is powered on
 - **On** `pioneer.power.on()` Turns the device on
 - **Off** `pioneer.power.off()` Turns the device on

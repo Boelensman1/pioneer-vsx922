@@ -15,6 +15,16 @@ export default class PowerCommands {
   }
 
   /**
+   * Set whether or not the device is turned on
+   */
+  public set(power: boolean): Promise<void> {
+    if (power) {
+      return this.on();
+    }
+    return this.off();
+  }
+
+  /**
    * Turn the device on
    */
   public on(): Promise<void> {
