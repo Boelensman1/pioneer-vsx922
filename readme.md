@@ -52,10 +52,10 @@ Everything related to volume
 - **Increase** `pioneer.volume.increase(5)` Increases the volume of the device by the given number
 - **Decrease** `pioneer.volume.decrease(5)` Decreases the volume of the device by the given number
 - **IsMuted** `pioneer.volume.isMuted()` Returns if the device is muted (true = no sound)
-- **SetMuted** `pioneer.volume.setMuted(true|false)` Mutes or unmutes te device
-- **ToggleMuted** `pioneer.volume.toggleMuted()` Toggles wether or not the device is muted
+- **SetMuted** `pioneer.volume.setMuted(true|false)` Mutes or unmutes to device
+- **ToggleMuted** `pioneer.volume.toggleMuted()` Toggles whether or not the device is muted
 
 #### Power
-- **Get** `pioneer.power.get()` Returns wether or not the device is powered on
+- **Get** `pioneer.power.get()` Returns whether or not the device is powered on
 - **On** `pioneer.power.on()` Turns the device on
 - **Off** `pioneer.power.off()` Turns the device on
