@@ -1,7 +1,13 @@
-// http://raymondjulin.com/2012/07/15/remote-control-your-pioneer-vsx-receiver-over-telnet/
-const volumeMatch = /VOL\d\d\d/
+import { Command } from './interfaces';
 
-export const commands = {
+// http://raymondjulin.com/2012/07/15/remote-control-your-pioneer-vsx-receiver-over-telnet/
+const volumeMatch = /VOL\d\d\d/;
+
+type Commands = {
+  [key: string]: Command,
+};
+
+export const commands : Commands = {
   // Volume
   volumeDown: {
     command: 'VD',
@@ -35,4 +41,4 @@ export const commands = {
     match: /PWR[01]/,
   },
   // TODO: inputselection
-}
+};
