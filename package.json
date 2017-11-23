@@ -2,6 +2,11 @@
   "name": "pioneer-vsx922",
   "version": "0.0.1",
   "description": "Wrapper for pioneer telnet api, tested on the vsx922 but probably works for most models",
+  "bugs": "https://github.com/Boelensman1/pioneer-vsx922/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Boelensman1/pioneer-vsx922"
+  },
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
