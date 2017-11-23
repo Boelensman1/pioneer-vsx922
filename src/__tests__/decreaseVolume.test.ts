@@ -3,7 +3,7 @@ import Pioneer from '..'; // tslint:disable-line import-name
 const pioneer = new Pioneer('10.0.0.117');
 
 it('Decreases the volume', () => (
-  pioneer.decreaseVolume().then((volume) => {
+  pioneer.volume.decrease().then((volume) => {
     expect(volume).toBeDefined();
     // between 0 and 100
     expect(volume).toBeGreaterThanOrEqual(0);

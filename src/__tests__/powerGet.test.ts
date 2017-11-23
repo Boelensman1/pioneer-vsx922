@@ -2,9 +2,10 @@ import Pioneer from '..'; // tslint:disable-line import-name
 
 const pioneer = new Pioneer('10.0.0.117');
 
-it('Set the volume to a value', () => (
-  pioneer.volume.set(75).then((result) => {
-    expect(result).toBeDefined();
+it('Get powerstate', () => (
+  pioneer.power.get().then((pwr) => {
+    expect(pwr).toBeDefined();
+    expect(pwr).toBe(true);
   })
 ));
 
